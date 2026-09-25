@@ -1,122 +1,1058 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kandang Sor Toren (KST) | Peternakan Ayam</title>
-<meta name="description" content="Kandang Sor Toren (KST) bergerak di bidang penetasan telur dan penjualan telur.">
-<style>
-:root{
-  --blue:#2563eb; --green:#16a34a; --purple:#7c3aed;
-  --dark:#14213d; --light:#f7f9fc; --white:#fff;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,Helvetica,sans-serif;color:var(--dark);background:var(--light);line-height:1.6}
-header{
-  background:linear-gradient(135deg,var(--blue),var(--purple),var(--green));
-  color:white;padding:70px 20px 85px;text-align:center;
-}
-.logo{font-size:64px;margin-bottom:10px}
-h1{font-size:clamp(34px,7vw,58px);letter-spacing:.5px}
-.tagline{font-size:18px;margin:10px auto 24px;max-width:650px}
-.btn{
-  display:inline-block;padding:13px 22px;border-radius:30px;text-decoration:none;
-  font-weight:bold;margin:5px;background:white;color:var(--blue)
-}
-.btn.green{background:#25D366;color:white}
-.container{max-width:1050px;margin:auto;padding:55px 20px}
-.section-title{text-align:center;font-size:30px;margin-bottom:12px}
-.section-sub{text-align:center;color:#64748b;margin-bottom:30px}
-.about{background:white;border-radius:22px;padding:30px;box-shadow:0 8px 30px #0000000d}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-.card{background:white;padding:26px;border-radius:20px;box-shadow:0 8px 25px #0000000b}
-.icon{font-size:40px;margin-bottom:10px}
-.card h3{margin-bottom:7px}
-.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:15px}
-.photo{
-  min-height:170px;border-radius:18px;background:linear-gradient(135deg,#dbeafe,#dcfce7);
-  display:flex;align-items:center;justify-content:center;font-size:50px
-}
-.contact{background:linear-gradient(135deg,#eff6ff,#f5f3ff);border-radius:24px;padding:35px;text-align:center}
-.contact p{margin:8px 0}
-footer{background:#111827;color:#d1d5db;text-align:center;padding:28px 20px}
-.small{font-size:14px;color:#94a3b8}
-.hero-photo{text-alig:center;padding:20px;}
-.hero-photo img{width:100%;max-width:400px;height:auto;display:block;margin:0 auto;}
-</style>
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Kandang Sor Toren | Peternakan Ayam</title>
+
+  <meta name="description"
+        content="Kandang Sor Toren - Peternakan ayam dan telur. Menyediakan ayam, telur, dan informasi peternakan.">
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --biru: #2563eb;
+      --biru-gelap: #123b7a;
+      --hijau: #16a34a;
+      --hijau-gelap: #15803d;
+      --kuning: #facc15;
+      --oranye: #f97316;
+      --putih: #ffffff;
+      --abu: #f3f4f6;
+      --gelap: #172033;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--abu);
+      color: var(--gelap);
+      line-height: 1.6;
+    }
+
+    /* =========================
+       NAVBAR
+    ========================== */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.96);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+      padding: 12px 20px;
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    .brand {
+      font-size: 21px;
+      font-weight: bold;
+      color: var(--biru-gelap);
+    }
+
+    .brand span {
+      color: var(--hijau);
+    }
+
+    .menu {
+      display: flex;
+      gap: 18px;
+      list-style: none;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: var(--gelap);
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .menu a:hover {
+      color: var(--biru);
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      min-height: 90vh;
+      padding: 55px 20px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(
+          135deg,
+          #dbeafe,
+          #dcfce7
+        );
+    }
+
+    .hero-container {
+      max-width: 1100px;
+      width: 100%;
+      margin: auto;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 45px;
+    }
+
+    .hero-text h1 {
+      font-size: clamp(38px, 7vw, 70px);
+      line-height: 1.05;
+      color: var(--biru-gelap);
+      margin-bottom: 18px;
+    }
+
+    .hero-text h1 span {
+      color: var(--hijau);
+    }
+
+    .hero-text p {
+      font-size: 19px;
+      margin-bottom: 28px;
+      color: #374151;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 22px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.25s;
+    }
+
+    .btn-primary {
+      background: var(--hijau);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--hijau-gelap);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--biru-gelap);
+      border: 2px solid var(--biru);
+    }
+
+    .btn-secondary:hover {
+      background: var(--biru);
+      color: white;
+    }
+
+    .hero-image {
+      text-align: center;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-width: 500px;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+      border: 8px solid white;
+    }
+
+    /* =========================
+       SECTION
+    ========================== */
+
+    section {
+      padding: 75px 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 36px;
+      color: var(--biru-gelap);
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #6b7280;
+      max-width: 650px;
+      margin: auto;
+    }
+
+    /* =========================
+       TENTANG
+    ========================== */
+
+    .about {
+      background: white;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about-image img {
+      width: 100%;
+      border-radius: 25px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    .about-text h3 {
+      font-size: 30px;
+      color: var(--hijau-gelap);
+      margin-bottom: 15px;
+    }
+
+    .about-text p {
+      margin-bottom: 15px;
+      color: #4b5563;
+    }
+
+    /* =========================
+       PRODUK
+    ========================== */
+
+    .products {
+      background: #f8fafc;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 25px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      transition: 0.25s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
+
+    .card-image {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .card-image img {
+      width: 100%;
+      max-width: 360px;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .card-content {
+      padding: 25px;
+      text-align: center;
+    }
+
+    .card-content h3 {
+      font-size: 25px;
+      color: var(--biru-gelap);
+      margin-bottom: 10px;
+    }
+
+    .card-content p {
+      color: #6b7280;
+    }
+
+    /* =========================
+       ANAK AYAM
+    ========================== */
+
+    .chick-section {
+      background:
+        linear-gradient(
+          135deg,
+          #fff7ed,
+          #fefce8
+        );
+    }
+
+    .chick-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .chick-image img {
+      width: 100%;
+      border-radius: 50%;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+    }
+
+    .chick-text h2 {
+      font-size: 38px;
+      color: #b45309;
+      margin-bottom: 15px;
+    }
+
+    .chick-text p {
+      color: #57534e;
+      margin-bottom: 18px;
+    }
+
+    .list {
+      list-style: none;
+    }
+
+    .list li {
+      margin: 10px 0;
+      font-weight: bold;
+    }
+
+    /* =========================
+       KANDANG
+    ========================== */
+
+    .farm {
+      background: white;
+    }
+
+    .farm-image {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .farm-image img {
+      width: 100%;
+      max-width: 1000px;
+      border-radius: 25px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    }
+
+    .farm-text {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .farm-text h2 {
+      font-size: 38px;
+      color: var(--biru-gelap);
+      margin-bottom: 15px;
+    }
+
+    .farm-text p {
+      color: #4b5563;
+      margin-bottom: 15px;
+    }
+
+    /* =========================
+       KEUNGGULAN
+    ========================== */
+
+    .advantages {
+      background: #eff6ff;
+    }
+
+    .advantage-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .advantage {
+      background: white;
+      padding: 30px 20px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+    }
+
+    .advantage-icon {
+      font-size: 45px;
+      margin-bottom: 12px;
+    }
+
+    .advantage h3 {
+      color: var(--biru-gelap);
+      margin-bottom: 8px;
+    }
+
+    .advantage p {
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    /* =========================
+       KONTAK
+    ========================== */
+
+    .contact {
+      background:
+        linear-gradient(
+          135deg,
+          var(--biru-gelap),
+          var(--biru)
+        );
+      color: white;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 38px;
+      margin-bottom: 12px;
+    }
+
+    .contact p {
+      margin-bottom: 25px;
+    }
+
+    .whatsapp {
+      display: inline-block;
+      background: #25d366;
+      color: white;
+      padding: 15px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 17px;
+    }
+
+    .whatsapp:hover {
+      background: #128c7e;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      background: #0f172a;
+      color: #cbd5e1;
+      text-align: center;
+      padding: 25px 20px;
+      font-size: 14px;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    /* =========================
+       RESPONSIVE HP
+    ========================== */
+
+    @media (max-width: 768px) {
+
+      .nav-container {
+        flex-direction: column;
+      }
+
+      .menu {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .menu a {
+        font-size: 13px;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 50px 18px;
+      }
+
+      .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-text h1 {
+        font-size: 45px;
+      }
+
+      .hero-text p {
+        font-size: 17px;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .about-grid,
+      .chick-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .advantage-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title h2 {
+        font-size: 30px;
+      }
+
+      .chick-text {
+        text-align: center;
+      }
+
+      .list {
+        text-align: left;
+        max-width: 300px;
+        margin: auto;
+      }
+
+      section {
+        padding: 55px 18px;
+      }
+    }
+
+  </style>
 </head>
+
 <body>
 
-<header>
-  <div class="logo">🐔</div>
-  <h1>Kandang Sor Toren</h1>
-  <p class="tagline"><strong>KST</strong> — Peternakan ayam yang bergerak di bidang penetasan telur dan penjualan telur.</p>
-  <a class="btn green" href="https://wa.me/6285196957002" target="_blank">💬 Chat WhatsApp</a>
-  <a class="btn" href="#produk">🥚 Lihat Produk</a>
-</header>
-<div class="hero-photo">
-  <img src="BackgroundEraser_20260923_063000167.png">
-</div> 
-<section class="container">
-  <div class="about">
-    <h2 class="section-title">Tentang KST</h2>
-    <p class="section-sub">Tumbuh dari usaha kecil, dengan semangat untuk terus berkembang.</p>
+  <!-- =========================
+       NAVBAR
+  ========================== -->
+
+  <nav>
+    <div class="nav-container">
+
+      <div class="brand">
+        Kandang <span>Sor Toren</span>
+      </div>
+
+      <ul class="menu">
+        <li>
+          <a href="#beranda">Beranda</a>
+        </li>
+
+        <li>
+          <a href="#tentang">Tentang</a>
+        </li>
+
+        <li>
+          <a href="#produk">Produk</a>
+        </li>
+
+        <li>
+          <a href="#kandang">Kandang</a>
+        </li>
+
+        <li>
+          <a href="#kontak">Kontak</a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+
+
+  <!-- =========================
+       BERANDA
+       FOTO 1 = AYAM
+  ========================== -->
+
+  <header class="hero" id="beranda">
+
+    <div class="hero-container">
+
+      <div class="hero-text">
+
+        <h1>
+          Kandang
+          <span>Sor Toren</span>
+        </h1>
+
+        <p>
+          Peternakan ayam yang menyediakan
+          ayam dan telur dengan perhatian
+          terhadap kualitas serta perawatan.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a
+            href="#produk"
+            class="btn btn-primary">
+            Lihat Produk
+          </a>
+
+          <a
+            href="#kontak"
+            class="btn btn-secondary">
+            Hubungi Kami
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="hero-image">
+
+        <img
+          src="ayam.png"
+          alt="Ayam Kandang Sor Toren">
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       TENTANG
+  ========================== -->
+
+  <section class="about" id="tentang">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Tentang Kandang Sor Toren</h2>
+
+        <p>
+          Mengenal lebih dekat kegiatan
+          peternakan Kandang Sor Toren.
+        </p>
+
+      </div>
+
+
+      <div class="about-grid">
+
+        <div class="about-image">
+
+          <img
+            src="image.png"
+            alt="Kandang Sor Toren">
+
+        </div>
+
+
+        <div class="about-text">
+
+          <h3>
+            Peternakan Ayam
+            Kandang Sor Toren
+          </h3>
+
+          <p>
+            Kandang Sor Toren merupakan
+            peternakan ayam yang berfokus
+            pada pemeliharaan ayam serta
+            produksi telur.
+          </p>
+
+          <p>
+            Dengan kandang yang tertata,
+            kebersihan dan perawatan ayam
+            menjadi bagian penting dalam
+            kegiatan peternakan.
+          </p>
+
+          <p>
+            Website ini dibuat sebagai media
+            informasi untuk mengenalkan
+            Kandang Sor Toren dan produk
+            yang tersedia.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       PRODUK
+       FOTO 2 = TELUR
+  ========================== -->
+
+  <section class="products" id="produk">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Produk Kami</h2>
+
+        <p>
+          Beberapa produk yang berkaitan
+          dengan kegiatan peternakan
+          Kandang Sor Toren.
+        </p>
+
+      </div>
+
+
+      <div class="product-grid">
+
+
+        <!-- TELUR -->
+
+        <div class="card">
+
+          <div class="card-image">
+
+            <img
+              src="telur.png"
+              alt="Telur Ayam">
+
+          </div>
+
+          <div class="card-content">
+
+            <h3>Telur Ayam</h3>
+
+            <p>
+              Telur ayam dari peternakan
+              Kandang Sor Toren.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- AYAM -->
+
+        <div class="card">
+
+          <div class="card-image">
+
+            <img
+              src="ayam.png"
+              alt="Ayam">
+
+          </div>
+
+          <div class="card-content">
+
+            <h3>Ayam</h3>
+
+            <p>
+              Ayam yang dipelihara di
+              Kandang Sor Toren.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       ANAK AYAM
+       FOTO 3
+  ========================== -->
+
+  <section class="chick-section">
+
+    <div class="container">
+
+      <div class="chick-grid">
+
+
+        <div class="chick-image">
+
+          <img
+            src="anak.png"
+            alt="Anak Ayam">
+
+        </div>
+
+
+        <div class="chick-text">
+
+          <h2>
+            Anak Ayam
+          </h2>
+
+          <p>
+            Perawatan ayam dimulai sejak
+            fase awal pertumbuhan. Anak ayam
+            membutuhkan perhatian, pakan,
+            air minum, dan lingkungan yang
+            sesuai.
+          </p>
+
+          <ul class="list">
+
+            <li>
+              🐣 Perawatan sejak dini
+            </li>
+
+            <li>
+              🌾 Pemberian pakan
+            </li>
+
+            <li>
+              💧 Air minum yang cukup
+            </li>
+
+            <li>
+              🏠 Lingkungan kandang yang baik
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       KANDANG
+       FOTO 4
+  ========================== -->
+
+  <section class="farm" id="kandang">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Kandang Sor Toren</h2>
+
+        <p>
+          Tempat pemeliharaan ayam
+          Kandang Sor Toren.
+        </p>
+
+      </div>
+
+
+      <div class="farm-image">
+
+        <img
+          src="image.png"
+          alt="Kandang Sor Toren">
+
+      </div>
+
+
+      <div class="farm-text">
+
+        <h2>
+          Kandang yang Tertata
+        </h2>
+
+        <p>
+          Kandang menjadi bagian penting
+          dalam kegiatan peternakan.
+          Penataan kandang membantu proses
+          pemeliharaan ayam sehari-hari.
+        </p>
+
+        <p>
+          Kandang Sor Toren terus mengutamakan
+          perawatan dan pengelolaan kandang
+          sebagai bagian dari kegiatan
+          peternakan.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       KEUNGGULAN
+  ========================== -->
+
+  <section class="advantages">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>
+          Kegiatan Kandang
+        </h2>
+
+        <p>
+          Beberapa hal penting dalam
+          kegiatan pemeliharaan ayam.
+        </p>
+
+      </div>
+
+
+      <div class="advantage-grid">
+
+
+        <div class="advantage">
+
+          <div class="advantage-icon">
+            🐔
+          </div>
+
+          <h3>
+            Pemeliharaan Ayam
+          </h3>
+
+          <p>
+            Perawatan ayam menjadi
+            bagian utama kegiatan
+            peternakan.
+          </p>
+
+        </div>
+
+
+        <div class="advantage">
+
+          <div class="advantage-icon">
+            🥚
+          </div>
+
+          <h3>
+            Produksi Telur
+          </h3>
+
+          <p>
+            Telur merupakan salah satu
+            hasil dari kegiatan
+            peternakan ayam.
+          </p>
+
+        </div>
+
+
+        <div class="advantage">
+
+          <div class="advantage-icon">
+            🏠
+          </div>
+
+          <h3>
+            Kandang
+          </h3>
+
+          <p>
+            Kandang yang tertata membantu
+            proses pemeliharaan ayam.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       KONTAK
+  ========================== -->
+
+  <section class="contact" id="kontak">
+
+    <div class="container">
+
+      <h2>
+        Hubungi Kandang Sor Toren
+      </h2>
+
+      <p>
+        Untuk informasi lebih lanjut,
+        silakan hubungi kami melalui
+        WhatsApp.
+      </p>
+
+      <a
+        class="whatsapp"
+        href="https://wa.me/6285196957002"
+        target="_blank">
+
+        💬 Hubungi via WhatsApp
+
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
     <p>
-      <strong>Kandang Sor Toren (KST)</strong> adalah usaha peternakan ayam yang berfokus pada
-      <strong>penetasan telur dan penjualan telur</strong>. Kami menjalankan usaha dengan
-      memperhatikan perawatan, kebersihan, dan kualitas agar dapat memberikan hasil terbaik
-      kepada pelanggan.
+      © 2026
+      <strong>Kandang Sor Toren</strong>
+      · Peternakan Ayam
     </p>
-  </div>
-</section>
 
-<section class="container" id="produk">
-  <h2 class="section-title">Produk & Layanan</h2>
-  <p class="section-sub">Pilihan produk dari Kandang Sor Toren</p>
-  <div class="cards">
-    <div class="card">
-      <div class="icon">🐣</div>
-      <h3>Penetasan Telur</h3>
-      <p>Menghasilkan anak ayam melalui proses penetasan dengan perawatan yang baik.</p>
-    </div>
-    <div class="card">
-      <div class="icon">🥚</div>
-      <h3>Penjualan Telur</h3>
-      <p>Menyediakan telur untuk kebutuhan pelanggan dan pengembangan usaha peternakan.</p>
-    </div>
-    <div class="card">
-      <div class="icon">🐔</div>
-      <h3>Peternakan Ayam</h3>
-      <p>Mengembangkan usaha peternakan secara bertahap dengan semangat dan ketekunan.</p>
-    </div>
-  </div>
-</section>
+  </footer>
 
-<section class="container">
-  <h2 class="section-title">Galeri KST</h2>
-  <p class="section-sub">Foto usaha dapat ditambahkan di bagian ini.</p>
-  <div class="gallery">
-    <div class="photo">🐔</div>
-    <div class="photo">🥚</div>
-    <div class="photo">🐣</div>
-    <div class="photo">🏘️</div>
-  </div>
-</section>
-
-<section class="container">
-  <div class="contact">
-    <h2 class="section-title">Hubungi Kandang Sor Toren</h2>
-    <p>Ingin bertanya atau memesan? Silakan hubungi kami melalui WhatsApp.</p>
-    <p><strong>WhatsApp: 0851-9695-7002</strong></p>
-    <a class="btn green" href="https://wa.me/6285196957002?text=Halo%20Kandang%20Sor%20Toren%2C%20saya%20ingin%20bertanya%20tentang%20produk." target="_blank">💬 Hubungi Sekarang</a>
-  </div>
-</section>
-
-<footer>
-  <strong>Kandang Sor Toren (KST)</strong>
-  <p class="small">Penetasan Telur • Penjualan Telur • Peternakan Ayam</p>
-  <p class="small">© 2026 Kandang Sor Toren. Semua hak dilindungi.</p>
-</footer>
 
 </body>
-</html>
+  </html>
